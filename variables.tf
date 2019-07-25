@@ -37,7 +37,7 @@ variable "type" {
 
 variable "prefix" {
     description = "a prefix for resources to be identified"
-    default = "${var.environment}-${var.project}"
+    default = "lb-"
 }
 
 
