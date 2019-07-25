@@ -15,7 +15,7 @@ resource "aws_lb" "lb" {
     enabled = true
   }
 
-  tags {
+  tags = {
     Name = "${var.name}"
     environment = "${var.environment}"
     project = "${var.project}"
@@ -34,7 +34,7 @@ resource "aws_alb_listener" "generic" {
     type             = "forward"
   }
 
-  tags {
+  tags = {
     Name = "${var.name}"
     environment = "${var.environment}"
     project = "${var.project}"
