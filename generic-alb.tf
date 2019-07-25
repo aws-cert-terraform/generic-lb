@@ -5,7 +5,7 @@ resource "aws_lb" "lb" {
   internal           = false
   load_balancer_type = "${var.type}" 
   security_groups    = var.security_groups
-  subnets            = ["${var.subnet_ids}"]
+  subnets            = var.subnet_ids
 
   enable_deletion_protection = true
 
