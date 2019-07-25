@@ -49,7 +49,7 @@ resource "aws_lb_target_group" "default_group" {
   protocol = "HTTP"
   vpc_id   = "${var.vpc_id}"
 
-  tags {
+  tags = {
     Name = "${var.name}"
     environment = "${var.environment}"
     project = "${var.project}"
