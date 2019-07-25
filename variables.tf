@@ -1,8 +1,5 @@
 
 
-variable "prefix" {
-    description = "a prefix for resources to be identified"
-}
 
 variable "vpc_id" {
     description = "VPC to connect to, used for a security group"
