@@ -25,7 +25,7 @@ resource "aws_lb" "lb" {
 
 # Define a listener
 resource "aws_alb_listener" "generic" {
-  load_balancer_arn = "${aws_alb.lb.arn}"
+  load_balancer_arn = "${aws_lb.lb.arn}"
   port              = "80"
   protocol          = "HTTP"
 
