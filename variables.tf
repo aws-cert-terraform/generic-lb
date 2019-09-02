@@ -17,10 +17,10 @@ variable "subnet_ids" {
 }
 
 
-variable "log_bucket_name" {
-    description = "Name of the S3 bucket for VPC logs"
-    type = "string"
-}
+// variable "log_bucket_name" {
+//     description = "Name of the S3 bucket for VPC logs"
+//     type = "string"
+// }
 
 variable "type" {
     description = "LB Type (defaults to 'application'"
@@ -42,17 +42,12 @@ variable "name" {
     default = "generic-ec2"
 }
 
-variable "project" {
-    default = "aws-cert"
+variable "tags" {
+    default = {
+        "project":"aws-certs",
+        "owner" :"icullinane",
+        "environment" : "dev"
+    }
 }
 
-
-variable "owner" {
-    default = "icullinane"
-}
-
-
-variable "environment" {
-    default = "dev"
-}
 
